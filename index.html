@@ -53,6 +53,9 @@
         });
     </script> -->
     <!--bez data-ng-app = ili ng-data = expression nece radit...samo ce ih ispisat kako i jesu  bez rjesavanja-->
+    <div data-ng-app="" data-ng-init="color = 'blue'">
+        <input style="background-color: {{color}}" data-ng-model="color" value="{{color}}">
+    </div>
 </body>
 
 </html>
