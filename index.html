@@ -72,7 +72,23 @@
         Last point is
         <label data-ng-bind="points[4]"></label>
     </div> -->
+    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        My full name is:
+        <label data-ng-bind="myN + ' ' + myS "></label>
+        <br>
+        <br>
+        <input type="text" data-ng-model="yourN">
+        <input type="text" data-ng-model="yourS">
+        <p>Your full name is: {{yourN + " " + yourS}}</p>
+    </div>
 
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.myN = 'abu';
+            $scope.myS = 'almo';
+        });
+    </script>
 </body>
 
 </html>
