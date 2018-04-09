@@ -108,15 +108,34 @@
         </p>
         <p>Total price is: {{ quantity * cost }}</p>
     </div> -->
-   <!--  <div data-ng-app="" data-ng-init="names = ['abu', 'oba', 'dudo']">
+    <!--  <div data-ng-app="" data-ng-init="names = ['abu', 'oba', 'dudo']">
         <ul>
             <li data-ng-repeat="allNames in names">
                 {{ allNames }}
             </li>
         </ul>
     </div> -->
+    <div data-ng-app="" data-ng-init="names = [
+        {name:'abu',country:'bosna'},
+        {name:'dudo',country:'bosna'},
+        {name:'oba',country:'bosna'}]">
 
+        <ul>
+            <li data-ng-repeat="data in names">
+                <p>
+                    <span data-ng-bind="data.name"> </span> lives in
+                    <span data-ng-bind="data.country"></span>
+                </p>
+            </li>
+        </ul>
 
+        <ul>
+            <li data-ng-repeat="data in names">
+                {{data.name + " " + data.country}}
+            </li>
+        </ul>
+
+    </div>
 
 </body>
 
