@@ -35,7 +35,23 @@
     <!-- <div data-ng-app="">
         {{5 + 5}}
     </div> -->
-    
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <p>First name:
+            <input type="text" data-ng-model="firstName">
+        </p>
+        <p>Last name:
+            <input type="text" data-ng-model="lastName">
+        </p>
+        <p>Full name: {{firstName + " " + lastName}}</p>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstName = 'abu'; //default value of input filed with ng-model firstName
+            $scope.lastName = 'almo'; //default value of input filed with ng-model lastName
+        });
+    </script> -->
 </body>
 
 </html>
