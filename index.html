@@ -140,7 +140,43 @@
         </ul>
 
     </div> -->
-    ANGULAR MODEL
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        Enter your name:
+        <input type="text" ng-model="name">
+        <h1>You entered: {{name}}</h1>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.name = 'abu almo';
+        });
+    </script> -->
+    <!--
+    <form ng-app="" name="form">
+        <label>Enter your email: </label>
+        <input type="email" name="email" ng-model="text">
+        <!--zasto ide ng-model = "text"
+    <span ng-show="form.email.$error.email">Please enter a valid email address</span>
+    </form> -->
+
+    <!-- <form ng-app="" name="form" ng-init="text = 'abud_almonajed@hotmail.com'">
+        <label>
+            Your email:
+        </label>
+        <input type="email" ng-model="text" name="email" required>
+        <h1>Status</h1>
+        <p>
+            Valid {{form.email.$valid}} (if true, the value meets all criteria)
+        </p>
+        <p>
+            Dirty {{form.email.$dirty}}(if true, the value has been changed).
+        </p>
+        <p>
+            Touched {{form.email.$touched}}(if true, the field has been in focus)</p>
+    </form> -->
+
+
 
 </body>
 
