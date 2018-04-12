@@ -191,6 +191,24 @@
         <input name="myName" ng-model="myText" required>
     </form> -->
 
+    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <h2>{{firstName}}</h2>
+        <button ng-click="changeName();">Click me</button>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstName = 'abu';
+            $scope.changeName = function () {
+                if ($scope.firstName == 'abu') {
+                    $scope.firstName = 'almo';
+                } else {
+                    $scope.firstName = 'abu';
+                }
+            }
+        });
+    </script>
 
 </body>
 
