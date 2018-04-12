@@ -191,7 +191,7 @@
         <input name="myName" ng-model="myText" required>
     </form> -->
 
-    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
         <h2>{{firstName}}</h2>
         <button ng-click="changeName();">Click me</button>
     </div>
@@ -205,6 +205,26 @@
                     $scope.firstName = 'almo';
                 } else {
                     $scope.firstName = 'abu';
+                }
+            }
+        });
+    </script> -->
+
+    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <input type="text" placeholder="Enter your name" data-ng-model="firstName">
+        <input type="text" placeholder="Enter your surname" data-ng-model="lastName">
+        <button ng-click="full();">Click</button>
+        <br> Full name: {{fullName()}}
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstName = 'abu';
+            $scope.lastName = 'almo';
+            $scope.full = function () {
+                $scope.fullName = function () {
+                    return $scope.firstName + " " + $scope.lastName;
                 }
             }
         });
