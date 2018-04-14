@@ -298,6 +298,30 @@
         <h1>{{myForm.myEmail.$valid}}</h1>
 
     </div> -->
+
+    <form data ng-app="myApp" data-ng-controller="myCtrl" name="myForm">
+        <input type="text" name="userName" data-ng-model="userName" required>
+        <span style="color:red;" data-ng-show="myForm.userName.$invalid && myForm.userName.$dirty ">
+            <span ng-show="myForm.userName.$error.required">Username is required</span>
+        </span>
+
+        <input type="email" name="email" data-ng-model="email" required>
+        <span style="color:red;" data-ng-show="myForm.email.$invalid && myForm.email.$dirty ">
+            <span ng-show="myForm.email.$error.required">Email is required.</span>
+            <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+        </span>
+
+        <input type="submit" ng-disabled="myForm.userName.$dirty && myForm.userName.$invalid || myForm.email.$dirty && myForm.email.$invalid">
+
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.userName = '';
+            $scope.email = '';
+        });
+    </script>
 </body>
 
 </html>
