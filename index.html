@@ -277,6 +277,20 @@
         });
     </script> -->
 
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <h2>{{time}}</h2>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $interval) {
+            $scope.time = new Date().toLocaleTimeString();
+            $interval(function () {
+                $scope.time = new Date().toLocaleTimeString();
+            }, 1000);
+        });
+    </script> -->
+
 </body>
 
 </html>
