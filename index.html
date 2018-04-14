@@ -241,7 +241,18 @@
         });
     </script> -->
 
+    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <h2>{{welcome}}</h2>
+    </div>
 
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http) {
+            $http.get("welcome.htm").then(function (response) {
+                $scope.welcome = response.data;
+            })
+        });
+    </script>
 
 
 </body>
