@@ -241,7 +241,7 @@
         });
     </script> -->
 
-    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
         <h2>{{welcome}}</h2>
     </div>
 
@@ -252,8 +252,30 @@
                 $scope.welcome = response.data;
             })
         });
-    </script>
+    </script> -->
 
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <h2>{{firstName}}</h2>
+        <button ng-click="changeName();">Click me</button>
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $timeout) {
+            $scope.firstName = 'abu';
+            $scope.changeName = function () {
+                if ($scope.firstName == 'abu') {
+                    $timeout(function () {
+                        $scope.firstName = 'almo';
+                    }, 2000);
+                } else {
+                    $timeout(function () {
+                        $scope.firstName = 'abu';
+                    }, 2000);
+                }
+            }
+        });
+    </script> -->
 
 </body>
 
