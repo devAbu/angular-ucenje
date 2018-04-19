@@ -9,7 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 
-<body data-ng-app="">
+<body>
+    <!--data-ng-app="myApp"-->
     <!-- <div ng-app="">
         <p>Name:
             <input type="text" ng-model="name">
@@ -140,7 +141,7 @@
         </ul>
 
     </div> -->
-    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+    <!--<div ng-app="myApp" ng-controller="myCtrl">
         Enter your name:
         <input type="text" ng-model="name">
         <h1>You entered: {{name}}</h1>
@@ -151,7 +152,7 @@
         app.controller('myCtrl', function ($scope) {
             $scope.name = 'abu almo';
         });
-    </script> -->
+    </script>-->
     <!--
     <form ng-app="" name="form">
         <label>Enter your email: </label>
@@ -348,22 +349,24 @@
         </div>
     </div> -->
 
-    <div data-ng-app="myApp" data-ng-controller="MyCtrl">
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
         Enter your name
-        <input type="text" data-ng-model="name"> Enter your surname
-        <input type="text" data-ng-model="surname">
-        <label>Your full name is:</label> {{fullName | uppercase}}
+        <input type="text" ng-model="name">
+        <br> Enter your surname
+        <input type="text" ng-model="surname">
+        <br>
+        <label>{{fullName | uppercase}}</label>
+        {{name+ " " + surname | uppercase}}
     </div>
 
     <script>
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function ($scope) {
-            $scope.name = "";
-            $scope.surname = "";
-            $scope.fullName = $scope.name + " " + $scope.surname;
+            $scope.name = "abu";
+            $scope.surname = "almo";
+            $scope.fullName = $scope.name + ' ' + $scope.surname;
         });
-    </script>
-
+    </script> -->
 
 </body>
 
