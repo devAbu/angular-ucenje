@@ -368,6 +368,25 @@
         });
     </script> -->
 
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        Enter your name
+        <input type="text" ng-model="name">
+        <br> Enter your surname
+        <input type="text" ng-model="surname">
+        <br>
+        <label>{{fullName | lowercase}}</label>
+        {{name+ " " + surname | lowercase}}
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.name = "abu";
+            $scope.surname = "almo";
+            $scope.fullName = $scope.name + ' ' + $scope.surname;
+        });
+    </script> -->
+
 </body>
 
 </html>
