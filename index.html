@@ -387,7 +387,7 @@
         });
     </script> -->
 
-    <div data-ng-app="myApp" data-ng-controller="myCtrl">
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
         <h2>JUHUUU</h2>
         <ul>
             <li data-ng-repeat="x in names | orderBy: 'country'">
@@ -408,9 +408,61 @@
                 }
             ];
         });
-    </script>
+    </script> -->
 
+    <!-- <div data-ng-app="myApp" data-ng-controller="myCtrl">
+        <p>Enter amount:
+            <input type="number" data-ng-model="money"> {{ money | currency}}
+        </p>
+    </div>
 
+    <script>
+        angular.module('myApp', []).controller('myCtrl', function ($scope) {
+            $scope.money = 0;
+        });
+    </script> -->
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in names | filter : 'i'">
+                {{ x }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        angular.module('myApp', []).controller('myCtrl', function ($scope) {
+            $scope.names = [
+                'abu',
+                'juhu',
+                'sin', 'abu',
+                'labud'
+            ];
+        });
+    </script> -->
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <input type="text" ng-model="test">
+
+        <ul>
+            <li ng-repeat="x in names | filter:test">
+                {{ x }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        angular.module('myApp', []).controller('myCtrl', function ($scope) {
+            $scope.names = [
+                'abu',
+                'sin',
+                'juhu',
+                'combe',
+                'huju',
+                'auto'
+            ]
+        })
+    </script> -->
 
 
 </body>
